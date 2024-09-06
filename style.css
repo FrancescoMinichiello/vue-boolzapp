@@ -3,7 +3,7 @@
 }
 
 header {
-    height: 100px;
+    height: 10vh;
     background-color: #569688;
 }
 
@@ -12,7 +12,15 @@ body {
 }
 
 /*Contacts*/
-
+#contacts {
+    height: 80vh;
+    background-color: white;
+}
 
 
 /*Messages*/
+
+#messages {
+    height: 80vh;
+    background-image: url('img/mine.png');
+}
