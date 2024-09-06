@@ -85,3 +85,7 @@ header {
     padding: 10px 17px;
     color: #ACD7F9;
 }
+
+.chat-list>ul li {
+    border-bottom: 1px solid lightgray;
+}

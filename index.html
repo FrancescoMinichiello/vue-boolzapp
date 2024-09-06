@@ -64,8 +64,11 @@
                         </div>
                         <!--chat list-->
                         <div class="chat-list">
-                            <ul>
-                                <li></li>
+                            <ul class="p-0">
+                                <li v-for="(contact, index) in contacts">
+                                    <img :src="contact.avatar" class="profile-pic ms-3 my-3" :alt="contact.name">
+                                    <span class="ms-2"> {{contact.name}} </span>
+                                </li>
                             </ul>
                         </div>
                     </div>
