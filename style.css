@@ -2,60 +2,86 @@
     font-family: "Lato", sans-serif;
 }
 
-header {
-    height: 10vh;
-    background-color: #569688;
-}
+/*general*/
 
 body {
     background-color: lightgray;
 }
 
-/*General*/
 li {
     list-style-type: none;
 }
 
-/*Header container*/
-#header-container {
-    background-color: rgb(189, 186, 186);
-    height: 8vh;
+header {
+    height: 150px;
+    background-color: #569688;
 }
 
+
+#full-container {
+    height: 500px;
+    background-color: white;
+    margin-top: -100px;
+}
+
+/*messages*/
+#messages {
+    background-image: url('img/mine.png');
+    height: 786px;
+    position: relative;
+}
+
+/*Header right*/
+.header-right {
+    background-color: #EAEAEA;
+    position: sticky;
+}
+
+
+/*Header left*/
 .header-left {
     border-right: 1px solid rgb(150, 150, 150);
+    background-color: #EAEAEA;
 }
 
-
-/*Contacts*/
-#contacts {
-    height: 70vh;
+/*chat list*/
+.chat-list {
+    height: 600px;
     background-color: white;
     overflow-y: scroll;
 }
 
-
-/*Messages*/
-#messages {
-    height: 70vh;
-    background-image: url('img/mine.png');
+/*chat*/
+#chat {
+    height: 700px;
     overflow-y: scroll;
+    padding: 30px;
 }
 
-#sent-messages {
-    background-color: #DFFBBE;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-#received-messages {
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
+/*send messages*/
+.send-messages {
+    background-color: #EAEAEA;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /*Profile pic img*/
 .profile-pic {
     width: 60px;
     border-radius: 50%;
+}
+
+/*notification*/
+.notification {
+    background-color: #ACD7F9;
+}
+
+.bi-bell-slash {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 17px;
+    color: #ACD7F9;
 }
