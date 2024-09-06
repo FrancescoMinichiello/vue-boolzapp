@@ -11,16 +11,51 @@ body {
     background-color: lightgray;
 }
 
+/*General*/
+li {
+    list-style-type: none;
+}
+
+/*Header container*/
+#header-container {
+    background-color: rgb(189, 186, 186);
+    height: 8vh;
+}
+
+.header-left {
+    border-right: 1px solid rgb(150, 150, 150);
+}
+
+
 /*Contacts*/
 #contacts {
-    height: 80vh;
+    height: 70vh;
     background-color: white;
+    overflow-y: scroll;
 }
 
 
 /*Messages*/
-
 #messages {
-    height: 80vh;
+    height: 70vh;
     background-image: url('img/mine.png');
+    overflow-y: scroll;
+}
+
+#sent-messages {
+    background-color: #DFFBBE;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#received-messages {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/*Profile pic img*/
+.profile-pic {
+    width: 60px;
+    border-radius: 50%;
 }
