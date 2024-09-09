@@ -174,6 +174,18 @@ createApp({
         selectContact(index) {
             // Aggiornamento del contatto attivo
             this.activeContact = index;
+        },
+        //funzione per scrivere un messaggio
+        addMessage() {
+            if (this.newMessage.trim() !== '') {
+                this.contacts[this.activeContact].messages.push({
+                    date: new Date().toLocaleString(),
+                    message: this.newMessage,
+                    status: 'sent'
+                });
+
+                this.newMessage = '';
+            }
         }
-    }
+    },
 }).mount('#app')

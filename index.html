@@ -71,7 +71,7 @@
                                     <!--stampo in pagina l'immagine di ogni contatto presente nell'array-->
                                     <img :src="contact.avatar" class="profile-pic ms-3 my-3" :alt="contact.name">
                                     <!--stampo in pagina il nome di ogni contatto presente nell'array-->
-                                    <span class="ms-2"> {{contact.name}} <br> {{contact.messages[1].message}}</span>
+                                    <span class="ms-2"> {{contact.name}} <br> {{contact.messages[0].message}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -92,22 +92,19 @@
                         </div>
                         <!--chat-->
                         <div id="chat">
-                            <div>
-                                <ul>
-                                    <li v-for="message in contacts[activeContact].messages"
-                                        :class="['messages', message.status === 'sent' ? 'sent' : 'received']">
-
-                                        <p class="m-0">{{ message.message }}</p>
-                                        <p class="date-messages m-0">{{ message.date }}</p>
-                                    </li>
-
-                                </ul>
-                            </div>
+                            <ul>
+                                <li v-for="message in contacts[activeContact].messages"
+                                    :class="['messages', message.status === 'sent' ? 'sent' : 'received']">
+                                    <p class="m-0">{{ message.message }}</p>
+                                    <p class="date-messages m-0">{{ message.date }}</p>
+                                </li>
+                            </ul>
                             <!--send messages-->
                             <div class="send-messages d-flex align-items-center">
                                 <i class="bi bi-emoji-smile fs-3 px-4"></i>
                                 <div class="input-group flex-nowrap">
-                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio"
+                                    <input type="text" v-model="newMessage" @keyup.enter="addMessage"
+                                        class="form-control" placeholder="Scrivi un messaggio"
                                         aria-label="Scrivi un messaggio" aria-describedby="addon-wrapping">
                                 </div>
                                 <i class="bi bi-mic fs-3 px-4"></i>
