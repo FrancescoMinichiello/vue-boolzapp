@@ -183,8 +183,15 @@ createApp({
                     message: this.newMessage,
                     status: 'sent'
                 });
-
                 this.newMessage = '';
+                //funzione risposta automatica
+                setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push({
+                        date: new Date().toLocaleString(),
+                        message: 'ok',
+                        status: 'received'
+                    });
+                }, 1000);
             }
         }
     },
