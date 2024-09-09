@@ -83,10 +83,10 @@
                         <div class="header-right d-flex align-items-center p-2">
 
                             <div>
-                                <img class="img-fluid profile-pic me-3" src="img/avatar_5.png" alt="">
+                                <img :src="contacts[activeContact].avatar" class="img-fluid profile-pic me-3" />
                             </div>
                             <div>
-                                <div>Michele</div>
+                                <div>{{ contacts[activeContact].name }}</div>
                                 <div>Ultimo accesso alle ore 12:00</div>
                             </div>
                         </div>
