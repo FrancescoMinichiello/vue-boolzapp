@@ -165,8 +165,15 @@ createApp({
                         }
                     ],
                 }
-            ]
-
+            ],
+            //index del contatto attivo
+            activeContact: 0,
         }
     },
+    methods: {
+        selectContact(index) {
+            // Aggiornamento del contatto attivo
+            this.activeContact = index;
+        }
+    }
 }).mount('#app')

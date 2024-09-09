@@ -65,9 +65,13 @@
                         <!--chat list-->
                         <div class="chat-list">
                             <ul class="p-0">
-                                <li v-for="(contact, index) in contacts">
+                                <!--creo un ciclo per girare tra tutti i contatti-->
+                                <li class="d-flex align-items-center" v-for="(contact, index) in contacts"
+                                    @click="selectContact(index)">
+                                    <!--stampo in pagina l'immagine di ogni contatto presente nell'array-->
                                     <img :src="contact.avatar" class="profile-pic ms-3 my-3" :alt="contact.name">
-                                    <span class="ms-2"> {{contact.name}} </span>
+                                    <!--stampo in pagina il nome di ogni contatto presente nell'array-->
+                                    <span class="ms-2"> {{contact.name}} <br> {{contact.messages[1].message}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -85,10 +89,20 @@
                                 <div>Michele</div>
                                 <div>Ultimo accesso alle ore 12:00</div>
                             </div>
-
                         </div>
                         <!--chat-->
                         <div id="chat">
+                            <div>
+                                <ul>
+                                    <li v-for="message in contacts[activeContact].messages"
+                                        :class="['messages', message.status === 'sent' ? 'sent' : 'received']">
+
+                                        <p class="m-0">{{ message.message }}</p>
+                                        <p class="date-messages m-0">{{ message.date }}</p>
+                                    </li>
+
+                                </ul>
+                            </div>
                             <!--send messages-->
                             <div class="send-messages d-flex align-items-center">
                                 <i class="bi bi-emoji-smile fs-3 px-4"></i>
