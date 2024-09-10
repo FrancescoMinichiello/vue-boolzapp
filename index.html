@@ -29,7 +29,6 @@
         </header>
 
         <main>
-
             <div id="full-container" class="container">
                 <div class="row">
                     <!--contacts-->
@@ -92,7 +91,7 @@
                         </div>
                         <!--chat-->
                         <div id="chat">
-                            <ul>
+                            <ul class="d-flex flex-column gap-2">
                                 <li v-for="message in contacts[activeContact].messages"
                                     :class="['messages', message.status === 'sent' ? 'sent' : 'received']">
                                     <p class="m-0">{{ message.message }}</p>
